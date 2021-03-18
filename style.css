@@ -1,0 +1,18 @@
+.container {
+    height: 400px;
+    width: 400px;
+    background-color: red;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.containerchild{
+    height: 200px;
+    width: 200px;
+    background-color: green;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
