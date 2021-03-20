@@ -16,164 +16,134 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="header">
-      <div class="headerleft">
-        <a href="https://www.w3schools.com/" class="icon">
-          w3schools<span class="dotcom">.com</span>
-        </a>
-      </div>
+    <!-- Header -->
+    <header class="header top">
 
-      <div class="headerright">
-        <div class="toptext">
-          THE WORLD'S LARGEST WEB DEVELOPER SITE
-          <button class="login">LOG IN</button>
+      <a href="https://www.w3schools.com/" class="logo__w3 flat--left" >
+        w3schools<span class="com--green">.com</span>
+      </a>
+
+      <div class="float--right" id="login__container">
+        <button style="display: inline; border: none; cursor: pointer;" class="login__btn">LOG IN</button>
+      </div>
+      
+
+      <div class="float--right__text header__w3-wide float--right" id="theworldgreatest" style="font-family:'Segoe UI',Arial,sans-serif">
+        THE WORLD'S LARGEST WEB DEVELOPER SITE
+      </div>
+      
+    </header>
+
+    <!-- nav -->
+    <nav class="nav__top nav__top--card " style="position: sticky; top: 0;">
+        <div class="bar--hidden flex--between" style="height: 44px;  overflow: hidden">
+              <a href="https://www.w3schools.com/default.asp" class="fa fa-home" title="Home"></a>
+              <a style="height: 44px;line-height: 44px; width: 60px; text-align: center;" class="active" href="https://www.w3schools.com/html/default.asp" title="HTML Tutorial">HTML</a>
+              <a class="" href="https://www.w3schools.com/css/default.asp" title="CSS Tutorial">CSS</a>
+              <a class="" href="https://www.w3schools.com/js/default.asp" title="JavaScript Tutorial">JAVASCRIPT</a>
+              <a class="" href="https://www.w3schools.com/sql/default.asp" title="SQL Tutorial">SQL</a>
+              <a class="" href="https://www.w3schools.com/python/default.asp" title="PYTHON Tutorial">PYTHON</a>
+              <a class="" href="https://www.w3schools.com/php/default.asp" title="PHP Tutorial">PHP</a>
+              <a class="" href="https://www.w3schools.com/bootstrap/bootstrap_ver.asp" title="Bootstrap Tutorial">BOOTSTRAP</a>
+              <a class="" href="https://www.w3schools.com/howto/default.asp"  title="">HOW TO</a>
+              <a class="" href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS Tutorial">W3.CSS</a>
+              <a class="" href="https://www.w3schools.com/jquery/default.asp"  title="JQUERY Tutorial">JQUERY</a>
+              <a class="" href="https://www.w3schools.com/java/default.asp" title="JAVA Tutorial">JAVA</a>
+              <a class="" title="Tutorials">MORE<i class="fa fa-caret-down"></i></a>
+              <a class="">EXERCISES<i class="fa fa-caret-down"></i></a>
+              <a class="">REFERENCES <i class="fa fa-caret-down"></i></a>
+              <a class="">COURSES</a>
+              <a class="">SHOP</a>
+              <a class="fa fa-adjust" title="Toggle Dark Code"></a>
+              <a class="fa fa-globe" title="Translate W3Schools"></a>
+              <a class="fa fa-search " title="Search W3Shools"></a>
         </div>
-      </div>
-    </div>
+        <!-- <div style="position: fixed; top: 0px;"></div> -->
+    </nav>
 
-    <div class="topnav" style="position: relative">
-      <div style="overflow: auto">
-        <div class="header" style="height: 44px; width: 100%; overflow: hidden">
-          <div>
-            <a class="topnav-icons fa fa-home" title="Home"></a>
-            <a class="topnav-icons" title="HTML Tutorial">HTML</a>
-            <a class="topnav-icons" title="CSS Tutorial">CSS</a>
-            <a class="topnav-icons" title="JavaScript Tutorial">JAVASCRIPT</a>
-            <a class="topnav-icons" title="SQL Tutorial">SQL</a>
-            <a class="topnav-icons" title="PYTHON Tutorial">PYTHON</a>
-            <a class="topnav-icons" title="PHP Tutorial">PHP</a>
-            <a class="topnav-icons" title="Bootstrap Tutorial">Bootstrap</a>
-            <a class="topnav-icons" title="">HOW TO</a>
-            <a class="topnav-icons" title="W3.CSS Tutorial">W3.CSS</a>
-            <a class="topnav-icons" title="JQUERY Tutorial">JQUERY</a>
-            <a class="topnav-icons" title="JAVA Tutorial">JAVA</a>
-            <a class="topnav-icons" title="Tutorials"
-              >MORE
-              <i class="fa fa-caret-down"></i>
-            </a>
-          </div>
-
-          <div>
-            <a class="topnav-icons"
-              >EXERCISES
-              <i class="fa fa-caret-down"></i>
-            </a>
-            <a class="topnav-icons"
-              >REFERENCES
-              <i class="fa fa-caret-down"></i>
-            </a>
-            <a class="topnav-icons">COURSES</a>
-            <a class="topnav-icons">SHOP</a>
-            <a
-              class="topnav-icons fa fa-star-half-o"
-              title="Toggle Dark Code"
-            ></a>
-            <a class="topnav-icons fa fa-globe" title="Translate W3Schools"></a>
-            <a class="topnav-icons fa fa-search" title="Search W3Shools"></a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div
-    >
-      <div>
-        <div >
+    <!-- sidebar -->
+    <aside class="sidebar">
+      <div id="leftmenuinner" >
+        <div id="leftmenuinnerinner" >
           <h2 ><span >HTML</span> Tutorial</h2>
-          <a  href="default.asp">HTML HOME</a>
-          <a  href="html_intro.asp">HTML Introduction</a>
-          <a  href="html_editors.asp">HTML Editors</a>
-          <a href="html_basic.asp">HTML Basic</a>
-          <a  href="html_elements.asp">HTML Elements</a>
-          <a  href="html_attributes.asp">HTML Attributes</a>
-          <a  href="html_headings.asp">HTML Headings</a>
-          <a  href="html_paragraphs.asp" class="active"
-            >HTML Paragraphs</a
-          >
-          <a  href="html_styles.asp">HTML Styles</a>
-          <a  href="html_formatting.asp">HTML Formatting</a>
-          <a  href="html_quotation_elements.asp"
-            >HTML Quotations</a
-          >
-          <a  href="html_comments.asp">HTML Comments</a>
-          <a  href="html_colors.asp">HTML Colors</a>
-          <div >
-            <a href="html_colors.asp">Colors</a>
-            <a href="html_colors_rgb.asp">RGB</a>
-            <a href="html_colors_hex.asp">HEX</a>
-            <a href="html_colors_hsl.asp">HSL</a>
+          <a  href="https://www.w3schools.com/html/default.asp">HTML HOME</a>
+          <a  href="https://www.w3schools.com/html/html_intro.asp">HTML Introduction</a>
+          <a  href="https://www.w3schools.com/html/html_editors.asp">HTML Editors</a>
+          <a href="https://www.w3schools.com/html/html_basic.asp">HTML Basic</a>
+          <a  href="https://www.w3schools.com/html/html_elements.asp">HTML Elements</a>
+          <a  href="https://www.w3schools.com/html/html_attributes.asp">HTML Attributes</a>
+          <a  href="https://www.w3schools.com/html/html_headings.asp">HTML Headings</a>
+          <a  href="https://www.w3schools.com/html/html_paragraphs.asp" class="active">HTML Paragraphs</a>
+          <a  href="https://www.w3schools.com/html/html_styles.asp">HTML Styles</a>
+          <a  href="https://www.w3schools.com/html/html_formatting.asp">HTML Formatting</a>
+          <a  href="https://www.w3schools.com/html/html_quotation_elements.asp">HTML Quotations</a>
+          <a  href="https://www.w3schools.com/html/html_comments.asp">HTML Comments</a>
+          <a  href="https://www.w3schools.com/html/html_colors.asp">HTML Colors</a>
+          <div class="sidebar--none">
+            <a href="https://www.w3schools.com/html/html_colors.asp">Colors</a>
+            <a href="https://www.w3schools.com/html/html_colors_rgb.asp">RGB</a>
+            <a href="https://www.w3schools.com/html/html_colors_hex.asp">HEX</a>
+            <a href="https://www.w3schools.com/html/html_colors_hsl.asp">HSL</a>
           </div>
-          <a href="html_css.asp">HTML CSS</a>
-          <a  href="html_links.asp">HTML Links</a>
-          <div >
-            <a  href="html_links.asp">Links</a>
-            <a  href="html_links_colors.asp">Link Colors</a>
-            <a href="html_links_bookmarks.asp">Link Bookmarks</a>
+          <a href="https://www.w3schools.com/html/html_css.asp">HTML CSS</a>
+          <a  href="https://www.w3schools.com/html/html_links.asp">HTML Links</a>
+          <div class="sidebar--none">
+            <a  href="https://www.w3schools.com/html/html_links.asp">Links</a>
+            <a  href="https://www.w3schools.com/html/html_links_colors.asp">Link Colors</a>
+            <a href="https://www.w3schools.com/html/html_links_bookmarks.asp">Link Bookmarks</a>
           </div>
-          <a  href="html_images.asp">HTML Images</a>
-          <div >
-            <a ref="html_images.asp">Images</a>
-            <a href="html_images_imagemap.asp">Image Map</a>
-            <a href="html_images_background.asp"
-              >Background Images</a
-            >
-            <a  href="html_images_picture.asp"
-              >The Picture Element</a
-            >
+          <a  href="https://www.w3schools.com/html/html_images.asp">HTML Images</a>
+          <div class="sidebar--none">
+            <a ref="https://www.w3schools.com/html/html_images.asp">Images</a>
+            <a href="https://www.w3schools.com/html/html_images_imagemap.asp">Image Map</a>
+            <a href="https://www.w3schools.com/html/html_images_background.asp">Background Images</a>
+            <a  href="https://www.w3schools.com/html/html_images_picture.asp">The Picture Element</a>
           </div>
-          <a  href="html_tables.asp">HTML Tables</a>
-          <a href="html_lists.asp">HTML Lists</a>
-          <div >
-            <a  href="html_lists.asp">Lists</a>
-            <a href="html_lists_unordered.asp">Unordered Lists</a>
-            <a  href="html_lists_ordered.asp">Ordered Lists</a>
-            <a  href="html_lists_other.asp">Other Lists</a>
+          <a  href="https://www.w3schools.com/html/html_tables.asp">HTML Tables</a>
+          <a href="https://www.w3schools.com/html/html_lists.asp">HTML Lists</a>
+          <div class="sidebar--none">
+            <a  href="https://www.w3schools.com/html/html_lists.asp">Lists</a>
+            <a href="https://www.w3schools.com/html/html_lists_unordered.asp">Unordered Lists</a>
+            <a  href="https://www.w3schools.com/html/html_lists_ordered.asp">Ordered Lists</a>
+            <a  href="https://www.w3schools.com/html/html_lists_other.asp">Other Lists</a>
           </div>
-          <a  href="html_blocks.asp">HTML Block &amp; Inline</a>
-          <a  href="html_classes.asp">HTML Classes</a>
-          <a  href="html_id.asp">HTML Id</a>
-          <a  href="html_iframe.asp">HTML Iframes</a>
-          <a  href="html_scripts.asp">HTML JavaScript</a>
-          <a  href="html_filepaths.asp">HTML File Paths</a>
-          <a  href="html_head.asp">HTML Head</a>
-          <a  href="html_layout.asp">HTML Layout</a>
-          <a  href="html_responsive.asp">HTML Responsive</a>
-          <a  href="html_computercode_elements.asp"
-            >HTML Computercode</a
-          >
+          <a  href="https://www.w3schools.com/html/html_blocks.asp">HTML Block &amp; Inline</a>
+          <a  href="https://www.w3schools.com/html/html_classes.asp">HTML Classes</a>
+          <a  href="https://www.w3schools.com/html/html_id.asp">HTML Id</a>
+          <a  href="https://www.w3schools.com/html/html_iframe.asp">HTML Iframes</a>
+          <a  href="https://www.w3schools.com/html/html_scripts.asp">HTML JavaScript</a>
+          <a  href="https://www.w3schools.com/html/html_filepaths.asp">HTML File Paths</a>
+          <a  href="https://www.w3schools.com/html/html_head.asp">HTML Head</a>
+          <a  href="https://www.w3schools.com/html/html_layout.asp">HTML Layout</a>
+          <a  href="https://www.w3schools.com/html/html_responsive.asp">HTML Responsive</a>
+          <a  href="https://www.w3schools.com/html/html_computercode_elements.asp">HTML Computercode</a>
           <a  href="html5_semantic_elements.asp">HTML Semantics</a>
           <a  href="html5_syntax.asp">HTML Style Guide</a>
-          <a  href="html_entities.asp">HTML Entities</a>
-          <a  href="html_symbols.asp">HTML Symbols</a>
-          <a  href="html_emojis.asp">HTML Emojis</a>
-          <a  href="html_charset.asp">HTML Charset</a>
-          <a  href="html_urlencode.asp">HTML URL Encode</a>
-          <a  href="html_xhtml.asp">HTML vs. XHTML</a>
+          <a  href="https://www.w3schools.com/html/html_entities.asp">HTML Entities</a>
+          <a  href="https://www.w3schools.com/html/html_symbols.asp">HTML Symbols</a>
+          <a  href="https://www.w3schools.com/html/html_emojis.asp">HTML Emojis</a>
+          <a  href="https://www.w3schools.com/html/html_charset.asp">HTML Charset</a>
+          <a  href="https://www.w3schools.com/html/html_urlencode.asp">HTML URL Encode</a>
+          <a  href="https://www.w3schools.com/html/html_xhtml.asp">HTML vs. XHTML</a>
           <br />
           <h2 ><span >HTML</span> Forms</h2>
-          <a  href="html_forms.asp">HTML Forms</a>
-          <a  href="html_forms_attributes.asp"
-            >HTML Form Attributes</a
-          >
-          <a  href="html_form_elements.asp">HTML Form Elements</a>
-          <a  href="html_form_input_types.asp">HTML Input Types</a>
-          <a  href="html_form_attributes.asp"
-            >HTML Input Attributes</a
-          >
-          <a  href="html_form_attributes_form.asp"
-            >HTML Input Form Attributes</a
-          >
+          <a  href="https://www.w3schools.com/html/html_forms.asp">HTML Forms</a>
+          <a  href="https://www.w3schools.com/html/html_forms_attributes.asp">HTML Form Attributes</a>
+          <a  href="https://www.w3schools.com/html/html_form_elements.asp">HTML Form Elements</a>
+          <a  href="https://www.w3schools.com/html/html_form_input_types.asp">HTML Input Types</a>
+          <a  href="https://www.w3schools.com/html/html_form_attributes.asp">HTML Input Attributes</a>
+          <a  href="https://www.w3schools.com/html/html_form_attributes_form.asp">HTML Input Form Attributes</a>
           <br />
           <h2 ><span >HTML</span> Graphics</h2>
           <a  href="html5_canvas.asp">HTML Canvas</a>
           <a  href="html5_svg.asp">HTML SVG</a>
           <br />
           <h2 ><span >HTML</span> Media</h2>
-          <a  href="html_media.asp">HTML Media</a>
+          <a  href="https://www.w3schools.com/html/html_media.asp">HTML Media</a>
           <a  href="html5_video.asp">HTML Video</a>
           <a  href="html5_audio.asp">HTML Audio</a>
-          <a  href="html_object.asp">HTML Plug-ins</a>
-          <a  href="html_youtube.asp">HTML YouTube</a>
+          <a  href="https://www.w3schools.com/html/html_object.asp">HTML Plug-ins</a>
+          <a  href="https://www.w3schools.com/html/html_youtube.asp">HTML YouTube</a>
           <br />
           <h2 ><span >HTML</span> APIs</h2>
           <a  href="html5_geolocation.asp">HTML Geolocation</a>
@@ -183,477 +153,154 @@
           <a  href="html5_serversentevents.asp">HTML SSE</a>
           <br />
           <h2 ><span >HTML</span> Examples</h2>
-          <a  href="html_examples.asp">HTML Examples</a>
-          <a  href="html_quiz.asp">HTML Quiz</a>
-          <a  href="html_exercises.asp">HTML Exercises</a>
-          <a  href="html_exam.asp">HTML Certificate</a>
-          <a  href="html_summary.asp">HTML Summary</a>
-          <a  href="html_accessibility.asp">HTML Accessibility</a>
+          <a  href="https://www.w3schools.com/html/html_examples.asp">HTML Examples</a>
+          <a  href="https://www.w3schools.com/html/html_quiz.asp">HTML Quiz</a>
+          <a  href="https://www.w3schools.com/html/html_exercises.asp">HTML Exercises</a>
+          <a  href="https://www.w3schools.com/html/html_exam.asp">HTML Certificate</a>
+          <a  href="https://www.w3schools.com/html/html_summary.asp">HTML Summary</a>
+          <a  href="https://www.w3schools.com/html/html_accessibility.asp">HTML Accessibility</a>
           <br />
           <h2 ><span >HTML</span> References</h2>
           <a  href="/tags/default.asp">HTML Tag List</a>
           <a  href="/tags/ref_attributes.asp">HTML Attributes</a>
-          <a  href="/tags/ref_standardattributes.asp"
-            >HTML Global Attributes</a
-          >
-          <a  href="/tags/ref_html_browsersupport.asp"
-            >HTML Browser Support</a
-          >
+          <a  href="/tags/ref_standardattributes.asp">HTML Global Attributes</a>
+          <a  href="/tags/ref_https://www.w3schools.com/html/html_browsersupport.asp">HTML Browser Support</a>
           <a  href="/tags/ref_eventattributes.asp">HTML Events</a>
           <a  href="/tags/ref_colornames.asp">HTML Colors</a>
           <a  href="/tags/ref_canvas.asp">HTML Canvas</a>
           <a  href="/tags/ref_av_dom.asp">HTML Audio/Video</a>
-          <a  href="/tags/ref_html_dtd.asp">HTML Doctypes</a>
-          <a  href="/tags/ref_charactersets.asp"
-            >HTML Character Sets</a
-          >
+          <a  href="/tags/ref_https://www.w3schools.com/html/html_dtd.asp">HTML Doctypes</a>
+          <a  href="/tags/ref_charactersets.asp">HTML Character Sets</a>
           <a  href="/tags/ref_urlencode.asp">HTML URL Encode</a>
-          <a  href="/tags/ref_language_codes.asp"
-            >HTML Lang Codes</a
-          >
+          <a  href="/tags/ref_language_codes.asp">HTML Lang Codes</a>
           <a  href="/tags/ref_httpmessages.asp">HTTP Messages</a>
           <a  href="/tags/ref_httpmethods.asp">HTTP Methods</a>
-          <a  href="/tags/ref_pxtoemconversion.asp"
-            >PX to EM Converter</a
-          >
-          <a  href="/tags/ref_keyboardshortcuts.asp"
-            >Keyboard Shortcuts</a
-          >
+          <a  href="/tags/ref_pxtoemconversion.asp">PX to EM Converter</a>
+          <a  href="/tags/ref_keyboardshortcuts.asp">Keyboard Shortcuts</a>
           <br /><br />
         </div>
       </div>
-    </div>
+    </aside>
 
-    <div  >
-      <div >
+    <!-- main -->
+    <div style="margin-left: 220px; padding-top: 0px;" >
+      <div class="main--color">
+        <div id="main">
 
-        <div
-        >
+          <h1>HTML <span >Paragraphs</span></h1>
+          <div class="clear__float nextprev">
+            <a style="margin-right: 1050px;" class=" btn" href="https://www.w3schools.com/html/html_headings.asp">❮ Previous</a>
+            <a class=" btn" href="https://www.w3schools.com/html/html_styles.asp">Next ❯</a>
+          </div>
+          <hr />
+          <p class="intro">A paragraph always starts on a new line, and is usually a block of text.</p>
+          <hr />
 
-        </div>
-        
-      </div>
-      <h1>HTML <span >Paragraphs</span></h1>
-      <div >
-        <a href="html_headings.asp">❮ Previous</a>
-        <a  href="html_styles.asp">Next ❯</a>
-      </div>
-      <hr />
-      <p >
-        A paragraph always starts on a new line, and is usually a block of text.
-      </p>
-      <hr />
+          <h2>HTML Paragraphs</h2>
+          <p>The HTML <code class="codespan">&lt;p&gt;</code> element defines aparagraph.</p>
+          <p>A paragraph always starts on a new line, and browsers automatically add some white space (a margin) before and after a paragraph.</p>
+          <img src="../clone-w3/img/ex1.PNG" style="width: 102%;" alt="ex:HTML Paragraphs">
+          <hr />
+    
+          <h2>HTML Display</h2>
+          <p>You cannot be sure how HTML will be displayed.</p><p>Large or small screens, and resized windows will create different results.</p>
+          <p>With HTML, you cannot change the display by adding extra spaces or extra lines in your HTML code.</p>
+          <p>The browser will automatically remove any extra spaces and lines when the page is displayed:</p>
+          <img src="../clone-w3/img/ex2.PNG" style="width: 102%;" alt="ex:HTML Display">
+          <hr />
+          <hr />
 
-      <h2>HTML Paragraphs</h2>
-      <p>
-        The HTML <code >&lt;p&gt;</code> element defines a
-        paragraph.
-      </p>
-      <p>
-        A paragraph always starts on a new line, and browsers automatically add
-        some white space (a margin) before and after a paragraph.
-      </p>
-      <div >
-        <h3>Example</h3>
-        <div >
-          <span 
-            ><span  >&lt;</span>p<span
-            
-              >&gt;</span
-            ></span
-          >This is a paragraph.<span 
-            ><span >&lt;</span>/p<span
+          <h2>HTML Horizontal Rules</h2>
+          <p>The <code class="codespan">&lt;hr&gt;</code> tag defines a thematic break in an HTML page, and is most often displayed as a horizontal rule.</p>
+          <p>The <code class="codespan">&lt;hr&gt;</code> element is used toseparate content (or define a change) in an HTML page:</p>
+          <img src="../clone-w3/img/ex3.PNG" style="width: 102%;" alt="ex:HTML Horizontal Rules">
+          <p>The <code class="codespan">&lt;hr&gt;</code> tag is an empty tag,which means that it has no end tag.</p>
+          <hr />
 
-              >&gt;</span
-            ></span
-          ><br />
-          <span 
-            ><span >&lt;</span>p<span
-           
-              >&gt;</span
-            ></span
-          >This is another paragraph.<span
-  
+          <h2>HTML Line Breaks</h2>
+          <p>The HTML <code class="codespan">&lt;br&gt;</code> element defines a line break.</p>
+          <p>Use <code class="codespan">&lt;br&gt;</code> if you want a line break (a new line) without starting a new paragraph:</p>
+          <img src="../clone-w3/img/ex4.PNG" style="width: 102%;" alt="ex:HTML Line Breaks">
+          <p>The <code class="codespan">&lt;br&gt;</code> tag is an empty tag,which means that it has no end tag.</p>
+          <hr />
+    
+          <h2>The Poem Problem</h2>
+          <p>This poem will display on a single line:</p>
+          <img src="../clone-w3/img/ex5.PNG" style="width: 102%;" alt="ex:The Poem Problem">
+          <hr />
+    
+          <h2>Solution - The HTML &lt;pre&gt; Element</h2>
+          <p>The HTML <code class="codespan">&lt;pre&gt;</code> element defines preformatted text.</p>
+          <p>The text inside a <code class="codespan">&lt;pre&gt;</code> element is displayed in a fixed-width font (usually Courier), and it preserves both spaces and line breaks:</p>
+          <img src="../clone-w3/img/ex6.PNG" style="width: 102%;" alt="ex:< pre Element">
 
-              >&gt;</span
-            ></span
-          >
-        </div>
-        <a
+          <hr />
+          <h2>HTML Exercises</h2>
+          <img src="../clone-w3/img/ex7.PNG" style="width: 102%;" alt="ex:HTML Exercises">
+          <hr />
+    
+          <h2>HTML Tag Reference</h2>
+          <p>W3Schools' tag reference contains additional information about HTMLelements and their attributes.</p>
+          <table class="table " >
+            <tbody>
+              <tr>
+                <th>Tag</th>
+                <th>Description</th>
+              </tr>
+              <tr>
+                <td><a href="https://www.w3schools.com/tags/tag_p.asp">&lt;p&gt;</a></td>
+                <td>Defines a paragraph</td>
+              </tr>
+              <tr>
+                <td><a href="https://www.w3schools.com/tags/tag_hr.asp">&lt;hr&gt;</a></td>
+                <td>Defines a thematic change in the content</td>
+              </tr>
+              <tr>
+                <td><a href="https://www.w3schools.com/tags/tag_br.asp">&lt;br&gt;</a></td>
+                <td>Inserts a single line break</td>
+              </tr>
+              <tr>
+                <td><a href="https://www.w3schools.com/tags/tag_pre.asp">&lt;pre&gt;</a></td>
+                <td>Defines pre-formatted text</td>
+              </tr>
+            </tbody>
+          </table>
 
-          >Try it Yourself »</a
-        >
-      </div>
-      <hr />
+          <div style="background-color: #ffffcc; margin-top: 24px; margin-bottom: 24px; margin-left: -32px; margin-right: -32px; padding: 16px 32px;">
+            <p>
+              For a complete list of all available HTML tags, visit our
+              <a href="https://www.w3schools.com/tags/default.asp">HTML Tag Reference</a>.
+            </p>
+          </div>
+    
+          <br />
 
-      <h2>HTML Display</h2>
-      <p>You cannot be sure how HTML will be displayed.</p>
-      <p>
-        Large or small screens, and resized windows will create different
-        results.
-      </p>
-      <p>
-        With HTML, you cannot change the display by adding extra spaces or extra
-        lines in your HTML code.
-      </p>
-      <p>
-        The browser will automatically remove any extra spaces and lines when
-        the page is displayed:
-      </p>
-      <div >
-        <h3>Example</h3>
-        <div >
-          <span  
-            ><span >&lt;</span>p<span
-              
-              
-              >&gt;</span
-            ></span
-          ><br />This paragraph<br />contains a lot of lines<br />in the source
-          code,<br />but the browser <br />ignores it.<br /><span
-            
-            
-            ><span >&lt;</span>/p<span
-              
-              
-              >&gt;</span
-            ></span
-          ><br /><br /><span  
-            ><span >&lt;</span>p<span
-              
-              
-              >&gt;</span
-            ></span
-          ><br />This paragraph<br />contains&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          a lot of spaces<br />in the
-          source&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; code,<br />but
-          the&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; browser <br />ignores
-          it.<br /><span  
-            ><span >&lt;</span>/p<span
-              
-              
-              >&gt;</span
-            ></span
-          >
-        </div>
-        <a
-          
-          
-          >Try it Yourself »</a
-        >
-      </div>
-      <hr />
-      <div
-        
-      >
-
-        <div
-
-        >
-
-        </div>
-      </div>
-      <hr />
-      <h2>HTML Horizontal Rules</h2>
-      <p>
-        The <code >&lt;hr&gt;</code> tag defines a thematic
-        break in an HTML page, and is most often displayed as a horizontal rule.
-      </p>
-      <p>
-        The <code >&lt;hr&gt;</code> element is used to
-        separate content (or define a change) in an HTML page:
-      </p>
-      <div >
-        <h3>Example</h3>
-        <div >
-          <span  
-            ><span >&lt;</span>h1<span
-              
-              
-              >&gt;</span
-            ></span
-          >This is heading 1<span  
-            ><span >&lt;</span
-            >/h1<span 
-              >&gt;</span
-            ></span
-          ><br /><span  
-            ><span >&lt;</span>p<span
-              
-              
-              >&gt;</span
-            ></span
-          >This is some text.<span  
-            ><span >&lt;</span>/p<span
-              
-              
-              >&gt;</span
-            ></span
-          ><br /><span  
-            ><span >&lt;</span>hr<span
-              
-              
-              >&gt;</span
-            ></span
-          ><br /><span  
-            ><span >&lt;</span>h2<span
-              
-              
-              >&gt;</span
-            ></span
-          >This is heading 2<span  
-            ><span >&lt;</span
-            >/h2<span 
-              >&gt;</span
-            ></span
-          ><br /><span  
-            ><span >&lt;</span>p<span
-              
-              
-              >&gt;</span
-            ></span
-          >This is some other text.<span
-            
-            
-            ><span >&lt;</span>/p<span
-              
-              
-              >&gt;</span
-            ></span
-          ><br /><span  
-            ><span >&lt;</span>hr<span
-              
-              
-              >&gt;</span
-            ></span
-          >
-        </div>
-        <a
-
-          
-          >Try it Yourself »</a
-        >
-      </div>
-      <p>
-        The <code >&lt;hr&gt;</code> tag is an empty tag,
-        which means that it has no end tag.
-      </p>
-      <hr />
-
-      <h2>HTML Line Breaks</h2>
-      <p>
-        The HTML <code >&lt;br&gt;</code> element defines a
-        line break.
-      </p>
-      <p>
-        Use <code >&lt;br&gt;</code> if you want a line break
-        (a new line) without starting a new paragraph:
-      </p>
-      <div >
-        <h3>Example</h3>
-        <div >
-          <span  
-            ><span >&lt;</span>p<span
-              
-              
-              >&gt;</span
-            ></span
-          >This is<span  
-            ><span >&lt;</span>br<span
-              
-              
-              >&gt;</span
-            ></span
-          >a paragraph<span  
-            ><span >&lt;</span>br<span
-              
-              
-              >&gt;</span
-            ></span
-          >with line breaks.<span  
-            ><span >&lt;</span>/p<span
-              
-              
-              >&gt;</span
-            ></span
-          >
-        </div>
-        <a
-
-          
-          >Try it Yourself »</a
-        >
-      </div>
-      <p>
-        The <code >&lt;br&gt;</code> tag is an empty tag,
-        which means that it has no end tag.
-      </p>
-      <hr />
-
-      <h2>The Poem Problem</h2>
-      <p>This poem will display on a single line:</p>
-      <div >
-        <h3>Example</h3>
-        <div >
-          <span  
-            ><span >&lt;</span>p<span
-              
-              
-              >&gt;</span
-            ></span
-          ><br />&nbsp; My Bonnie lies over the ocean.<br /><br />&nbsp; My
-          Bonnie lies over the sea.<br /><br />&nbsp; My Bonnie lies over the
-          ocean.<br /><br />&nbsp; Oh, bring back my Bonnie to me.<br /><span
-            
-            
-            ><span >&lt;</span>/p<span
-              
-              
-              >&gt;</span
-            ></span
-          >
-        </div>
-        <a
-
-          >Try it Yourself »</a
-        >
-      </div>
-      <hr />
-
-      <h2>Solution - The HTML &lt;pre&gt; Element</h2>
-      <p>
-        The HTML <code >&lt;pre&gt;</code> element defines
-        preformatted text.
-      </p>
-      <p>
-        The text inside a <code >&lt;pre&gt;</code> element
-        is displayed in a fixed-width font (usually Courier), and it preserves
-        both spaces and line breaks:
-      </p>
-      <div >
-        <h3>Example</h3>
-        <div >
-          <span  
-            ><span >&lt;</span
-            >pre<span 
-              >&gt;</span
-            ></span
-          ><br />&nbsp; My Bonnie lies over the ocean.<br />
-          <br />&nbsp; My Bonnie lies over the sea.<br /><br />&nbsp; My Bonnie
-          lies over the ocean.<br /><br />&nbsp; Oh, bring back my Bonnie to
-          me.<br /><span  
-            ><span >&lt;</span
-            >/pre<span 
-              >&gt;</span
-            ></span
-          >
-        </div>
-        <a
-          
-
-          >Try it Yourself »</a
-        >
-      </div>
-      <hr />
-      <h2>HTML Exercises</h2>
-
-        <h2>Test Yourself With Exercises</h2>
-        <div ></div>
-          <h2>Exercise:</h2>
-          <p>
-            Use the correct HTML tag to add a paragraph with the text "Hello
-            World!".
-          </p>
-          <div >
-            &lt;html&gt;
-            <br />
-            &lt;body&gt;
-            <br />
-            <input />
-            <br />
-            &lt;/body&gt;
-            <br />
-            &lt;/html&gt;
+          <div class="clear__float nextprev">
+            <a style="margin-right: 1050px;" class="btn" href="https://www.w3schools.com/html/html_headings.asp">❮ Previous</a>
+            <a class="btn" href="https://www.w3schools.com/html/html_styles.asp">Next ❯</a>
           </div>
           <br />
-          <button  >
-            Submit Answer »
-          </button>
-          <p>
-            <a
-
-              >Start the Exercise</a
-            >
-          </p>
         </div>
-      </form>
-      <hr />
-
-      <h2>HTML Tag Reference</h2>
-      <p>
-        W3Schools' tag reference contains additional information about HTML
-        elements and their attributes.
-      </p>
-      <table >
-        <tbody>
-          <tr>
-            <th>Tag</th>
-            <th>Description</th>
-          </tr>
-          <tr>
-            <td><a href="/tags/tag_p.asp">&lt;p&gt;</a></td>
-            <td>Defines a paragraph</td>
-          </tr>
-          <tr>
-            <td><a href="/tags/tag_hr.asp">&lt;hr&gt;</a></td>
-            <td>Defines a thematic change in the content</td>
-          </tr>
-          <tr>
-            <td><a href="/tags/tag_br.asp">&lt;br&gt;</a></td>
-            <td>Inserts a single line break</td>
-          </tr>
-          <tr>
-            <td><a href="/tags/tag_pre.asp">&lt;pre&gt;</a></td>
-            <td>Defines pre-formatted text</td>
-          </tr>
-        </tbody>
-      </table>
-      <div>
-        <p>
-          For a complete list of all available HTML tags, visit our
-          <a href="/tags/default.asp">HTML Tag Reference</a>.
-        </p>
       </div>
 
-      <br />
-      <div >
-        <a href="html_headings.asp">❮ Previous</a>
-        <a href="html_styles.asp">Next ❯</a>
-      </div>
-      <div ></div>
-      <br />
     </div>
+    <hr>
+    
 
-    <div id="footer">
-      <div >
+    <!-- report -->
+    <div class="flex--between" id="report" style="margin-left: 220px; padding-top: 0px;">
+      <button class="btn__report" >REPORT ERROR</button>
+      <button class="btn__report" >FORUM</button>
+      <button class="btn__report" >ABOUT</button>
+      <button class="btn__report" >SHOP</button>
+    </div>
+    <hr>
 
-      </div>
-      <div>
-          <div>
-              <button>REPORT ERROR</button>
-              <button>FORUM</button>
-              <button>ABOUT</button>
-              <button>SHOP</button>
-          </div>
-          <div>
-              
-              <h2>Report Error</h2>
-              <p>If you want to report an error, or if you want to make a suggestion, do not hesitate to send us an
-                  e-mail:</p>
-              <p>help@w3schools.com</p>
-          </div>
-          <div>
-              <div>
+    <!-- footer -->
+    <footer id="footer" style="margin-left: 220px;">
+      <div style="margin-top: 10px;">
+          <div  class="flex--between footer__main">
+              <div class="footer__col">
                   <h4>Top Tutorials</h4>
                   <a>HTML Tutorial</a>
                   <a>CSS Tutorial</a>
@@ -668,7 +315,7 @@
                   <a>C++ Tutorial</a>
                   <a>jQuery Tutorial</a>
               </div>
-              <div>
+              <div class="footer__col">
                   <h4>Top References</h4>
                   <a>HTML Reference</a>
                   <a>CSS Reference</a>
@@ -683,7 +330,7 @@
                   <a>Angular Reference</a>
                   <a>jQuery Reference</a>
               </div>
-              <div>
+              <div class="footer__col">
                   <h4>Top Examples</h4>
                   <a>HTML Examples</a>
                   <a>CSS Examples</a>
@@ -698,42 +345,44 @@
                   <a>XML Examples</a>
                   <a>jQuery Examples</a>
               </div>
-              <div>
+              <div class="footer__col">
                   <h4>Web Courses</h4>
-                  <a>HTML Course</a><br>
-                  <a>CSS Course</a><br>
-                  <a>JavaScript Course</a><br>
-                  <a>Front End Course</a><br>
-                  <a>SQL Course</a><br>
-                  <a>Python Course</a><br>
-                  <a>PHP Course</a><br>
-                  <a>jQuery Course</a><br>
-                  <a>Java Course</a><br>
-                  <a>C++ Course</a><br>
-                  <a>C# Course</a><br>
-                  <a>XML Course</a><br>
-                  <button>Get Certified »</button>
+                  <a>HTML Course</a>
+                  <a>CSS Course</a>
+                  <a>JavaScript Course</a>
+                  <a>Front End Course</a>
+                  <a>SQL Course</a>
+                  <a>Python Course</a>
+                  <a>PHP Course</a>
+                  <a>jQuery Course</a>
+                  <a>Java Course</a>
+                  <a>C++ Course</a>
+                  <a>C# Course</a>
+                  <a>XML Course</a>
+                  <button class="footer__btn">Get Certified »</button>
               </div>
           </div>
-          <div>
+          <hr>
+
+          <div class="footer--center">
               <p>
                   W3Schools is optimized for learning and training. Examples might be simplified to improve reading
                   and
                   learning. Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot
                   warrant full correctness of all content. While using W3Schools, you agree to have read and accepted
-                  our <a>terms of use</a>,<a>cookie and privacy policy</a>.
+                  our <a href="https://www.w3schools.com/about/about_copyright.asp">terms of use</a>,<a href="https://www.w3schools.com/about/about_privacy.asp">cookie and privacy policy</a>.
               </p>
               <p>
-                  <a>Copyright 1999-2021</a> by Refsnes Data. All Rights Reserved.
+                  <a href="https://www.w3schools.com/about/about_copyright.asp">Copyright 1999-2021</a> by Refsnes Data. All Rights Reserved.
               </p>
               <p>
                   <a href="//www.w3schools.com/w3css/default.asp">W3Schools is Powered by W3.CSS</a>.
               </p>
-              <a href="//www.w3schools.com">></a>
+              <a href="//www.w3schools.com"><img src="../clone-w3/img/footer.PNG"></a>
+              
           </div>
-
       </div>
-  </div>
+  </footer>
 
     <script src="script.js"></script>
   </body>
