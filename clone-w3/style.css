@@ -106,7 +106,7 @@ a {
 }
 
 .nav__top{
-    position: relative;
+    /* position: relative; */
     font-size: 17px;
     background-color: #5f5f5f;
     color: #f1f1f1;
@@ -151,7 +151,8 @@ a {
     height: 100%;
     width: 200px;
     background-color: #fff;
-    position: fixed!important;
+    top:44px;
+    position: sticky;
     overflow: auto;
 }
 
@@ -226,15 +227,17 @@ a {
     background-color: #4CAF50;
 }
 
-.nextprev a.float--right, .nextprev a.float--left {
-    background-color: #4CAF50;
-    color: #ffffff;
-    border-color: #4CAF50;
+.nextprev {
+    display: flex;
+    justify-content: space-between;
 }
 
 .nextprev a {
     font-size: 17px;
     border: 1px solid #cccccc;
+    background-color: #4CAF50;
+    color: #ffffff;
+    border-color: #4CAF50;
 }
 
 .intro {
