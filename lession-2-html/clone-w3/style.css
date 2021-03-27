@@ -148,24 +148,18 @@ a {
 }
 
 .sidebar {
-    height: 100%;
+    height: 700px  ;
     width: 200px;
     background-color: #fff;
-    top:44px;
     position: sticky;
-    overflow: auto;
-}
-
-#leftmenuinner {
+    top:44px;
     overflow-y: scroll;
-    height: 100%;
-    width: 220px;
+    overflow-x: hidden;
 }
 
 #leftmenuinnerinner {
     height: 100%;
     width: 100%;
-    overflow-x: hidden;
     padding-top: 20px;
     color: #000!important;
     background-color: #f1f1f1!important;
