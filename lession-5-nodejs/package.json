@@ -1,0 +1,24 @@
+{
+  "name": "web-d03",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khoaphan1161996/web-d03.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/khoaphan1161996/web-d03/issues"
+  },
+  "homepage": "https://github.com/khoaphan1161996/web-d03#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
