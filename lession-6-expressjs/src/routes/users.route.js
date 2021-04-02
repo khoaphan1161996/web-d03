@@ -16,25 +16,7 @@ router.delete('/:id', usersController.deleteUser)
 
 
 // PUT
-// router.put('/:id', (req, res) => {      
-//     const {id} = req.params
-//     const user = users.find(user => user.id === id)
-
-//     if(!user){
-//         let index = users.indexOf(user)
-//         users[index] = 
-
-//         return res.status(200).json({
-//             isSuccess: true,
-//             message: 'put user id',
-//             users,
-//         }) 
-//     } 
-
-//     return res.status(400).json({
-//         isSuccess: false,
-//         message: 'exist',
-//   })
+router.put('/:id',  usersController.putUser)
 
 
 // POST

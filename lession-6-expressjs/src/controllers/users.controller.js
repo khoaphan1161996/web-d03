@@ -57,7 +57,37 @@ module.exports.deleteUser = (req, res) => {
             users,
         }) 
     } 
+
+    res.status(400).json({
+        isSuccess: false,
+        message: 'not find the user id',
+    })  
   }
+
+module.exports.putUser = (req, res) => {      
+    const {id} = req.params
+    const { name } = req.body
+    const user = users.find(user => user.id === id)
+
+    if(user){
+        let index = users.indexOf(user)
+        users[index] = {
+            id: id,
+            name,
+        }
+
+        return res.status(200).json({
+            isSuccess: true,
+            message: 'put user id',
+            users,
+        })
+    } 
+
+    return res.status(400).json({
+        isSuccess: false,
+        message: 'user does not exist',
+  })
+}
 
 module.exports.postUser = (req, res) => {      
     const { name } = req.body
