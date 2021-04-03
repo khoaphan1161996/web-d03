@@ -93,7 +93,7 @@ module.exports.postUser = (req, res) => {
     const { name } = req.body
 
     if(!name){
-        res.status(400).json({
+        return res.status(400).json({
             isSuccess: false,
             message: 'invalid name',
         })  
