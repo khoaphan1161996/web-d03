@@ -7,7 +7,9 @@ const posts = [
         time: '1:00',
         comments: [
             {author: "khoa",
-             comment: "hi"}
+             comment: [
+                 "hi","hello"
+             ]}
         ]
     },
     {
@@ -18,7 +20,9 @@ const posts = [
         time: '3:00',
         comments: [
             {author: "khoa",
-             comment: "hi"}
+            comment: [
+                "hi","hello"
+            ]}
         ]
     },
     {
@@ -29,9 +33,13 @@ const posts = [
         time: '4:00',
         comments: [
             {author: "khoa",
-             comment: "hi"},
+            comment: [
+                "hi","hello"
+            ]},
              {author: "vinh",
-             comment: "bye"},
+             comment: [
+                "bye","hello"
+            ]},
         ]
     },
     {
@@ -42,9 +50,13 @@ const posts = [
         time: '2:45',
         comments: [
             {author: "khoa",
-             comment: "hi"},
+            comment: [
+                "hi","hello"
+            ]},
              {author: "vinh",
-             comment: "bye"},
+             comment: [
+                "bye","hello"
+            ]},
         ]
     },
 ]
