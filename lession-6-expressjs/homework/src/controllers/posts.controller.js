@@ -76,7 +76,7 @@ module.exports.getPostsByID = (req,res) => {
     if(!post){
         return res.status(400).json({
             isSuccess: false,
-            message: 'not find post id'
+            message: 'not found post id'
         })
     }
 
@@ -125,7 +125,7 @@ module.exports.putPost = (req,res) => {
         
         return res.status(200).json({
             isSuccess: true,
-            message: 'patch post id',
+            message: 'put post id',
             posts,
         })
         }
@@ -153,6 +153,6 @@ module.exports.deletePost = (req,res) => {
 
     return res.status(400).json({
         isSuccess: false,
-        message: 'not find the user id',
+        message: 'not found the user id',
     })
 }

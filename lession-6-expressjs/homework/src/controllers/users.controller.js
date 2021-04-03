@@ -34,7 +34,7 @@ module.exports.deleteUser = (req,res) => {
     
     res.status(400).json({
         isSuccess: false,
-        message: 'not find the user id',
+        message: 'not found the user id',
     })
 }
 
