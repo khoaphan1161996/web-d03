@@ -1,5 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+// Import cors
+// const cors = require('cors')
 
 const usersRoute = require("./routes/users.route")
 const postsRoute = require('./routes/posts.route')
@@ -9,6 +11,7 @@ const app = express();
 const port = 8080;
 
 app.use(bodyParser.json());
+// app.use(cors())
 
 app.use('/users', usersRoute)
 app.use('/posts', postsRoute)
