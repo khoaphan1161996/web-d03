@@ -1,18 +1,29 @@
+const API_URL = "http://localhost:8080"
+
 $('#load-btn').click(function() {
-    $('#text').load("http://localhost:8080/users/")
+    $('#text').load(`${API_URL}/users`)
   })
 
-  $('#get-btn').click(function() {
-    $.get("http://localhost:8080/users/", 
-    function(data, status) {
-      alert("Data: " + data + "\nStatus: " + status)
-    })
-  })
+$('#get-btn').click(function() {
+$.get(`${API_URL}/users`, 
+function(data, status) {
+    console.log("Data: " + data + "\nStatus: " + status)
+})
+})
 
-  $('#post-btn').click(function() {
-    $.post("http://localhost:8080/users/",
-    {id: 4, name: 'Tuuu'},
-    function(data, status) { 
-      alert("Data: " + data + "\nStatus: " + status)
-    })
-  })
+$('#post-btn').click(function() {
+$.ajax({
+    url: `${API_URL}/users`,
+    data: JSON.stringify({
+        name: 'Hieu'
+    }),
+    type: 'POST',
+    contentType: 'application/json',
+    success: function(response) {
+        console.log('POST response', response)
+    },
+    error: function(error) {
+        console.log(error)
+    }
+})
+})
