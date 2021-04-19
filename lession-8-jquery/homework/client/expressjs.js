@@ -15,7 +15,7 @@ $('#post-btn').click(function() {
 $.ajax({
     url: `${API_URL}/users`,
     data: JSON.stringify({
-        name: 'Hieu'
+        name: $("#login-name").val()
     }),
     type: 'POST',
     contentType: 'application/json',
