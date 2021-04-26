@@ -1,81 +1,75 @@
 const User = require('../models/users.model');
 
-module.exports.getUsers = (req, res) => {      
+module.exports.getUsers = async (req, res) => {      
+    const users = await User.find()
     res.status(200).json({
-        isSuccess: true,
-        message: 'success',
+        isSuccess:true,
+        message:'successfully received users',
         users
-    })     
+    })  
   }
 
-module.exports.getUsersByID = (req, res) => {      
+module.exports.getUsersByID = async (req, res) => {      
     const {id} = req.params
-    const user = users.find(user => user.id === id)
+    const user = await User.findById(id)
 
-    if(!user){
-        return res.status(400).json({
-            isSuccess: false,
-            message: 'not find the user id',
+    if(user){
+        return res.status(200).json({
+            isSuccess: true,
+            message: 'successfully received users by id',
+            user
         }) 
     }
 
-    res.status(200).json({
-        isSuccess: true,
-        message: 'success',
-        user
+    res.status(400).json({
+        isSuccess: false,
+        message: 'not found the user id'
     })     
   }
 
 module.exports.deleteUser = (req, res) => {      
     const {id} = req.params
-    const user = users.find(user => user.id === id)
 
-    if(user){
-        let index = users.indexOf(user)
-        users.splice(index,1)
+    User.findByIdAndDelete(id,function (err,doc) {
+        if(err) {
+            return res.status(500).json({
+                isSuccess: false,
+                message: "user delete failure with id"
+            })
+        }
 
-        return res.status(200).json({
+        res.status(200).json({
             isSuccess: true,
-            message: 'delete user id',
-            users,
-        }) 
-    } 
-
-    res.status(400).json({
-        isSuccess: false,
-        message: 'not find the user id',
-    })  
+            message: "user is successfully delete"
+        })
+    })
   }
 
 module.exports.putUser = (req, res) => {      
     const {id} = req.params
-    const { name } = req.body
-    const user = users.find(user => user.id === id)
-
-    if(user){
-        let index = users.indexOf(user)
-        users[index] = {
-            id: id,
-            name,
+    
+    User.findByIdAndUpdate(id ,req.body, function (err,doc){
+        if(err){
+            return res.status(500).json({
+                isSuccess: false,
+                message: "user update failure with id"
+            })
         }
 
-        return res.status(200).json({
-            isSuccess: true,
-            message: 'put user id',
-            users,
-        })
-    } 
-
-    return res.status(400).json({
-        isSuccess: false,
-        message: 'user does not exist',
-  })
+        else {
+            return res.status(200).json({
+                isSuccess: true,
+                message: "user is successfully update",
+                updateUser: {...doc._doc, ...req.body}
+            })
+        }
+    })
 }
 
 module.exports.postUser = (req, res) => {      
     const { email, password,firstName, lastName,birthday,isMale} = req.body 
 
-    if(!email || !password || !firstName || !lastName || !birthday || !isMale){
+    if(!email || !password || !firstName || !lastName || !birthday){
         return res.status(400).json({
             isSuccess: false,
             message: 'missing required fields',
@@ -84,7 +78,7 @@ module.exports.postUser = (req, res) => {
 
     const newUser = new User({... req.body}) // create new document form model
 
-    newUser.save(function (err,doc){
+    newUser.save(function (err,doc){  // save = insert
         if(err) {
             return res.status(500).json({
                 isSuccess: false,
@@ -99,10 +93,4 @@ module.exports.postUser = (req, res) => {
             })
         }
     })
-
-    res.status(200).json({
-        isSuccess: true,
-        message: 'success',
-        users
-    })     
   }
