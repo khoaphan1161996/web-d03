@@ -9,22 +9,23 @@ module.exports.getPosts = async (req,res) => {
     }) 
 }
 
-module.exports.getPostsByID = (req,res) => {
-    // const {id} = req.params
-    // const post = posts.find(post => post.id === id)
+module.exports.getPostsByID = async (req,res) => {
+    const {id} = req.params
 
-    // if(!post){
-    //     return res.status(400).json({
-    //         isSuccess: false,
-    //         message: 'not found post id'
-    //     })
-    // }
-
-    // return res.status(200).json({
-    //     isSuccess: true,
-    //     message: 'success',
-    //     post
-    // })
+    const post = await Post.findById(id)
+    if(post){
+        return res.status(200).json({
+            isSuccess: true,
+            message: 'success',
+            post
+        })
+    }
+    else{
+        return res.status(404).json({
+            isSuccess: false,
+            message: 'not found the user id'
+        })
+    }
 }
 
 module.exports.CreateNewPost = (req,res) => {
@@ -38,56 +39,63 @@ module.exports.CreateNewPost = (req,res) => {
     }
 
     const newPost = new Post({...req.body})
+
+    newPost.save(function(err,doc){
+        if(err){
+            return res.status(500).json({
+                isSuccess: false,
+                message: 'database error'
+            })
+        }
+        else {
+            res.status(200).json({
+                isSuccess: true,
+                message: 'success',
+                newPost: doc
+            })
+        }
+    })
     
 }
 
 module.exports.putPost = (req,res) => {
-    // const {id} = req.params
-    // const {title, content, author} = req.body
-    
-    // const now = new Date();
-    // const post = posts.find(post => post.id === id) 
+    const {id} = req.params
 
-    // if(post){
-    //     let index = posts.indexOf(post)
-    //     posts[index] = {
-    //         id: id,
-    //         title,
-    //         content,
-    //         author,
-    //         time: `${now.getHours()}:${now.getMinutes()}`,
-    //     }
-        
-    //     return res.status(200).json({
-    //         isSuccess: true,
-    //         message: 'put post id',
-    //         posts,
-    //     })
-    //     }
-        
-    //     return res.status(400).json({
-    //         isSuccess: false,
-    //         message: 'post does not exist',
-    //     })
+    Post.findByIdAndUpdate(id,req.body,function(err,doc){
+        if(err){
+            return res.status(500).json({
+                isSuccess: false,
+                message: "post update failure with id"
+            })
+        }
+
+        else {
+            return res.status(200).json({
+                isSuccess: true,
+                message: "post is successfully update",
+                updatePost: {...doc._doc, ...req.body}
+            })
+        }
+    })
+
 }
 
 module.exports.deletePost = (req,res) => {
-    // const {id} = req.params
-    // const post = posts.find(post => post.id === id) 
+    const {id} = req.params
 
-    // if(post){
-    //     let index = posts.indexOf(post)
-    //     posts.splice(index,1)
+    Post.findByIdAndDelete(id,function (err,doc){
+        if(err) {
+            return res.status(500).json({
+                isSuccess: false,
+                message: "post delete failure with id"
+            })
+        }
 
-    //     return res.status(200).json({
-    //         isSuccess: true,
-    //         message: 'delete post id',
-    //         posts,
-    //     })
-    // }
-
-    // return res.status(400).json({
-    //     isSuccess: false,
-    //     message: 'not found the user id',
-    // })
+        else {
+            res.status(200).json({
+                isSuccess: true,
+                message: "delete post or comment"
+            })
+        }
+    })
 }
