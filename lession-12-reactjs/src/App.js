@@ -1,11 +1,15 @@
 import './App.css';
-import FunctionalComponent from './components/FunctionalComponent'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import HomePage from './pages/HomePage'
 
 function App() {
 
   return (
-    <div className="App">
-      <FunctionalComponent name="Quang" age="20" gender="male" />
+    <div className="app">
+      <Header />
+      <HomePage />
+      <Footer />
     </div>
   );
 }

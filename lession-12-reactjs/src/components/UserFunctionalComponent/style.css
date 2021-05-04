@@ -1,0 +1,11 @@
+.functional-component {
+    border: 1px solid gray;
+    border-radius:16px;
+    margin:16px 30%;
+    padding:0 80px;
+    box-shadow: 3px 5px 3px gray;
+}
+
+.functional-component p {
+    font-weight: 700;
+}
