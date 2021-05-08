@@ -14,7 +14,7 @@ class ClockCountDownToZero extends React.Component {
 
     componentDidMount(){
         let timer = setInterval(
-            () => this.tick(), 1000
+            () => this.countdown(), 1000
         )
     }
 
@@ -22,7 +22,7 @@ class ClockCountDownToZero extends React.Component {
         clearInterval(this.timer)
     }
 
-    tick() {
+    countdown() {
         showtime.setSeconds(showtime.getSeconds() - 1)
         this.setState(state => ({
             date: showtime

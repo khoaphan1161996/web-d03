@@ -5,9 +5,11 @@ import './style.css'
 import UserFunctionalComponent from '../../components/UserFunctionalComponent'
 import UserClassComponent from '../../components/UserClassComponent'
 import CountClassComponent from '../../components/CountClassComponent'
+import CountFuncComponent from '../../components/CountFuncComponent'
 import Clock from '../../components/ClockClassComponent'
 import PostClassComponent from '../../components/PostClassComponent'
 import ClockCountDownToZero from '../../components/ClockCountDownToZero'
+import ClockFuncComponent from '../../components/ClockFuncComponent'
 
 
 const postList = [
@@ -40,15 +42,12 @@ class HomePage extends React.Component {
     }
 
     handleIsClicked(index) {
-        
-        if(this.state.posts[index].isClicked == true) {
-            this.setState({
-                posts : !this.state.posts[index].isClicked
-            })
-        }
+        let postList = this.state.posts
+        let isClicked = this.state.posts[index].isClicked
+        postList[index].isClicked = !isClicked
 
-        else this.setState({
-            posts : !this.state.posts[index].isClicked
+        this.setState({
+            posts : postList
         })
 
     }
@@ -56,12 +55,14 @@ class HomePage extends React.Component {
     render() {
         return (
             <div className="home-page">
-                {/* <UserFunctionalComponent name='Hieu' age={18} gender='male' />
-                <UserClassComponent name='Khoa' age={25} gender="male" />
-                <CountClassComponent />
-                <Clock /> */}
+                {/* <UserFunctionalComponent name='Hieu' age={18} gender='male' /> */}
+                {/* <UserClassComponent name='Khoa' age={25} gender="male" /> */}
+                {/* <CountClassComponent /> */}
+                {/* <CountFuncComponent /> */}
+                {/* <Clock /> */}
+                <ClockFuncComponent />
                 {/* <ClockCountDownToZero /> */}
-                {this.state.posts.map((post,index)=> <PostClassComponent {...post} key={index} handleIsClicked={()=>{this.handleIsClicked(index)}} />)}
+                {/* {this.state.posts.map((post,index)=> <PostClassComponent {...post} key={index} handleIsClicked={()=>{this.handleIsClicked(index)}} />)} */}
             </div>
         )
     }

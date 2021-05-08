@@ -10,10 +10,6 @@
     font-weight: 700;
 }
 
-.green{
-    background-color: green;
-}
-
-.normal {
-    background-color: initial;
+.post--clicked{
+    background-color: #ccc;
 }

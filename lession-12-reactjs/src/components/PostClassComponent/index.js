@@ -8,17 +8,24 @@ class PostClassComponent extends React.Component {
         this.state = {}
     }
 
+    shouldComponentUpdate(nextProps) {
+        if(this.props.isClicked !== nextProps.isClicked){
+            return true
+        }
+        return false
+    }
+
     
     render () {
         const {id,author,content,isClicked,handleIsClicked} = this.props
-
+        console.log(content)
         return (
-            <div className={isClicked ? `${id} post green` : `${id} post normal`}>
+            <div onClick={handleIsClicked} className={isClicked ? "post post--clicked" : "post"}>
                 <h1>{author}</h1>
                 <p>{content}</p>
-                <button onClick={handleIsClicked} >ChangeBackGround</button>
             </div>
         )
+        
     }
   
 }
