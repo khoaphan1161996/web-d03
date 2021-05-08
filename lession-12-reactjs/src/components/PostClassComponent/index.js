@@ -5,21 +5,18 @@ import './style.css'
 class PostClassComponent extends React.Component {
     constructor (props) {
         super(props)
-        this.state = {
-            
-        }
+        this.state = {}
     }
 
     
     render () {
-        const {id,author,content,isClicked} = this.props
+        const {id,author,content,isClicked,handleIsClicked} = this.props
 
         return (
-            <div className="post">
-                <h3>{id}</h3>
+            <div className={isClicked ? `${id} post green` : `${id} post normal`}>
                 <h1>{author}</h1>
                 <p>{content}</p>
-                <p>{isClicked}</p>
+                <button onClick={handleIsClicked} >ChangeBackGround</button>
             </div>
         )
     }

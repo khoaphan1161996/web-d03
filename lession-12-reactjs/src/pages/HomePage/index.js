@@ -7,6 +7,7 @@ import UserClassComponent from '../../components/UserClassComponent'
 import CountClassComponent from '../../components/CountClassComponent'
 import Clock from '../../components/ClockClassComponent'
 import PostClassComponent from '../../components/PostClassComponent'
+import ClockCountDownToZero from '../../components/ClockCountDownToZero'
 
 
 const postList = [
@@ -34,8 +35,22 @@ class HomePage extends React.Component {
     constructor(props){
         super(props)
         this.state = {
-            posts: postList
+            posts: postList,
         }
+    }
+
+    handleIsClicked(index) {
+        
+        if(this.state.posts[index].isClicked == true) {
+            this.setState({
+                posts : !this.state.posts[index].isClicked
+            })
+        }
+
+        else this.setState({
+            posts : !this.state.posts[index].isClicked
+        })
+
     }
 
     render() {
@@ -45,7 +60,8 @@ class HomePage extends React.Component {
                 <UserClassComponent name='Khoa' age={25} gender="male" />
                 <CountClassComponent />
                 <Clock /> */}
-                {this.state.posts.map(post=> <PostClassComponent {...post}  />)}
+                {/* <ClockCountDownToZero /> */}
+                {this.state.posts.map((post,index)=> <PostClassComponent {...post} key={index} handleIsClicked={()=>{this.handleIsClicked(index)}} />)}
             </div>
         )
     }

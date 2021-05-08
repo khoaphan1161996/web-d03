@@ -9,3 +9,11 @@
 .post p {
     font-weight: 700;
 }
+
+.green{
+    background-color: green;
+}
+
+.normal {
+    background-color: initial;
+}
