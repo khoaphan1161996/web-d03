@@ -3,31 +3,27 @@ import React from 'react'
 import './style.css'
 
 class PostClassComponent extends React.Component {
-    constructor (props) {
-        super(props)
-        this.state = {}
+  shouldComponentUpdate(nextProps, nextState) {
+    if(nextProps.postInfo.isClicked === this.props.postInfo.isClicked) {
+      return false
     }
+    return true
+  }
 
-    shouldComponentUpdate(nextProps) {
-        if(this.props.isClicked !== nextProps.isClicked){
-            return true
-        }
-        return false
-    }
-
-    
-    render () {
-        const {id,author,content,isClicked,handleIsClicked} = this.props
-        console.log(content)
-        return (
-            <div onClick={handleIsClicked} className={isClicked ? "post post--clicked" : "post"}>
-                <h1>{author}</h1>
-                <p>{content}</p>
-            </div>
-        )
-        
-    }
-  
+  render() {
+    const { postInfo, onClickPost } = this.props
+    const { id, author, content, isClicked } = postInfo
+    // console.log(content)
+    return (
+      <div 
+        className={isClicked ? "post post--clicked" : "post"}
+        onClick={() => onClickPost(id)}
+      >
+        <p className="post__author">{author}</p>
+        <p className="post__content">{content}</p>
+      </div>
+    )
+  }
 }
 
 export default PostClassComponent

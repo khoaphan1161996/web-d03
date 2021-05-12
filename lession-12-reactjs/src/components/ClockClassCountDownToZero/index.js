@@ -2,13 +2,11 @@ import React from 'react'
 
 import './style.css'
 
-let showtime = new Date()
-
-class ClockCountDownToZero extends React.Component {
+class ClockClassCountDownToZero extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            date: showtime
+            date: new Date()
         }
     }
 
@@ -23,9 +21,8 @@ class ClockCountDownToZero extends React.Component {
     }
 
     countdown() {
-        showtime.setSeconds(showtime.getSeconds() - 1)
         this.setState(state => ({
-            date: showtime
+            date: new Date(state.date - 1000) 
         }))
     }
 
@@ -39,4 +36,4 @@ class ClockCountDownToZero extends React.Component {
     }
 }
 
-export default ClockCountDownToZero
+export default ClockClassCountDownToZero
