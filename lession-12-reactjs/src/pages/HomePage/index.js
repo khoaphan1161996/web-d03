@@ -80,14 +80,20 @@ function HomePage(){
   const [posts,setNewPost] = useState(postList)
 
   function handleClickPost(postId) {
-    const newPosts = posts.map(post => {
-      if (post.id === postId) {
+    // const newPosts = posts.map(post => {
+    //   if (post.id === postId) {
+    //     return {...post,isClicked:!post.isClicked}
+    //   }
+    //   return post
+    // })
+    
+    // setNewPost(newPosts)
+    setNewPost(posts=>posts.map(post => {
+      if(post.id === postId) {
         return {...post,isClicked:!post.isClicked}
       }
       return post
-    })
-    
-    setNewPost(newPosts)
+    }))
   }
 
   return (

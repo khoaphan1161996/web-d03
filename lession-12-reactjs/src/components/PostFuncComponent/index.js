@@ -3,15 +3,13 @@ import React, { useState, useEffect } from "react";
 import "./style.css";
 
 function postPropsAreEqual(prevProps,nextProps) {
-  console.log(prevProps.postInfo.isClicked === nextProps.postInfo.isClicked)
-
-    return prevProps.postInfo.isClicked === nextProps.postInfo.isClicked
+  return prevProps.postInfo.isClicked === nextProps.postInfo.isClicked
 }
 
 function PostFuncComponent(props) {
   const { postInfo, onClickPost } = props;
   const { id, author, content, isClicked } = postInfo;
-  // console.log(postInfo)
+  console.log(author)
   
   return (
     <div
