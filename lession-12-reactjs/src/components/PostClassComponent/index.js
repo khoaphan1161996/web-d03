@@ -3,7 +3,7 @@ import React from 'react'
 import './style.css'
 
 class PostClassComponent extends React.Component {
-  shouldComponentUpdate(nextProps, nextState) {
+  shouldComponentUpdate = (nextProps, nextState) => {
     if(nextProps.postInfo.isClicked === this.props.postInfo.isClicked) {
       return false
     }

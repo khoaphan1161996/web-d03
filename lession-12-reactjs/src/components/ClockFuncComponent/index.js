@@ -12,7 +12,7 @@ function ClockFuncComponent() {
         }
     })
 
-    function tick() {
+    const tick = () => {
         setDate(new Date())
     }
     

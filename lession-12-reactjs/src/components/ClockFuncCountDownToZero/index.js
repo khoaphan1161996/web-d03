@@ -2,7 +2,7 @@ import React,{useState, useEffect} from 'react'
 
 import './style.css'
 
-function ClockFuncCountDownToZero() {
+const ClockFuncCountDownToZero = () => {
     const [clock, setDate] = useState(new Date())
 
     useEffect(()=>{
@@ -13,7 +13,7 @@ function ClockFuncCountDownToZero() {
         }
     })
 
-    function countdown() {
+    const countdown = () => {
         setDate(new Date(clock-1000))
     }
 

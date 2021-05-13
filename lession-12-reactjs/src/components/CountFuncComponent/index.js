@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import './style.css'
 
-function CountFuncComponent () {
+const CountFuncComponent = () => {
     const [count, setCount] = useState(0)
 
     return (

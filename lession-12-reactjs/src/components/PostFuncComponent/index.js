@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 
 import "./style.css";
 
-function postPropsAreEqual(prevProps,nextProps) {
+const postPropsAreEqual = (prevProps,nextProps) => {
   return prevProps.postInfo.isClicked === nextProps.postInfo.isClicked
 }
 
-function PostFuncComponent(props) {
+const PostFuncComponent = (props) => {
   const { postInfo, onClickPost } = props;
   const { id, author, content, isClicked } = postInfo;
   console.log(author)

@@ -12,7 +12,7 @@ class CountClassComponent extends React.Component {
         // this.count = this.count.bind(this)
     }
 
-    count(params) {
+    count = (params) => {
         // let currentCount = this.state.count
         // currentCount += params
         // this.setState({count: currentCount})

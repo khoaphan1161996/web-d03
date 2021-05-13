@@ -1,6 +1,6 @@
 import './style.css'
 
-function UserFunctionalComponent(props) {
+const UserFunctionalComponent = (props) => {
   const {name,age,gender} = props
 
   return (
