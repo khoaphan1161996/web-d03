@@ -10,7 +10,7 @@ function ClockFuncComponent() {
         return function cleanup() {
             clearInterval(timer)
         }
-    })
+    }, [])
 
     const tick = () => {
         setDate(new Date())

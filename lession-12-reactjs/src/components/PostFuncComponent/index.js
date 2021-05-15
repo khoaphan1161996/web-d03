@@ -9,7 +9,7 @@ const postPropsAreEqual = (prevProps,nextProps) => {
 const PostFuncComponent = (props) => {
   const { postInfo, onClickPost } = props;
   const { id, author, content, isClicked } = postInfo;
-  console.log(author)
+  // console.log(author)
   
   return (
     <div
@@ -23,4 +23,3 @@ const PostFuncComponent = (props) => {
 }
 
 export default React.memo(PostFuncComponent,postPropsAreEqual)
-// export default PostFuncComponent

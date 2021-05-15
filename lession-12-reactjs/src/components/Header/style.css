@@ -2,3 +2,34 @@
     padding:16px;
     border:1px solid #000;
 }
+
+.header__menu {
+    background-color: blue;
+    height:100px;
+}
+
+.header__menu ul {
+    list-style: none;
+    display:flex;
+    line-height: 100px;
+    height:100px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__link {
+    color: #fff;
+    text-decoration: none;
+    padding:30px
+}
+
+.header__link:hover {
+    background-color: #ccc;
+    color: #000
+}
+
+.header__link--actived {
+    background-color: #ccc;
+    color: #000
+}
