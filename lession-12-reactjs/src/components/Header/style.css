@@ -1,10 +1,10 @@
 .header {
-    padding:16px;
+    /* padding:16px; */
     border:1px solid #000;
 }
 
 .header__menu {
-    background-color: blue;
+    background-color: #282A35;
     height:100px;
 }
 
@@ -19,17 +19,15 @@
 }
 
 .header__link {
-    color: #fff;
+    color: #f1f1f1;;
     text-decoration: none;
-    padding:30px
+    padding:39px
 }
 
 .header__link:hover {
-    background-color: #ccc;
-    color: #000
+    background-color: #000000
 }
 
 .header__link--actived {
-    background-color: #ccc;
-    color: #000
+    background-color: #000000
 }

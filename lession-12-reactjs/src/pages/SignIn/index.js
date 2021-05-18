@@ -24,7 +24,7 @@ const SignIn = (props) => {
         history.push({pathname: './home'})
     }
 
-    const handleSinUp = () => {
+    const handleSignUp = () => {
         console.log('email:',email,'password:',password)
         history.push({pathname: './sign-up'})
     }
@@ -46,8 +46,8 @@ const SignIn = (props) => {
                 value={password} 
                 onChange={handlePasswordChange}></input>
 
-                <button onClick={handleSignIn} className="form-control btn">{SIGN_IN}</button>
-                <button onClick={handleSinUp} className="form-control btn">{SIGN_UP}</button>
+                <button onClick={handleSignIn} className="form-control btn btn-sign_in">{SIGN_IN}</button>
+                <button onClick={handleSignUp} className="form-control btn btn-sign_up">{SIGN_UP}</button>
             </div>
         </div>
     )
