@@ -1,17 +1,16 @@
-.post {
-    border: 1px solid gray;
-    border-radius: 16px;
-    margin: 16px 30%;
-    padding: 0 80px;
-    box-shadow: 3px 5px 7px gray;
-    text-align: left;
+.postid {
+    flex-grow: 1;
+}
+
+.btn-back {
+    padding:10px;
+    color:#000;
+    font-size:20px;
+    outline: none;
+    border: none;
+    border-radius:10px ;
     cursor: pointer;
-  }
-  
-  .post--clicked {
-    background-color: gray;
-  }
-  
-  .post__author {
-    font-weight: 700;
-  }
+    background-color: #ccc;
+    float: left;
+    text-decoration: none;
+}

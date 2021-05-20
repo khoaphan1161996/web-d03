@@ -22,7 +22,7 @@ mongoose.connect("mongodb://localhost:27017/web-d03-db", function(err){
 
 app.use('/users', usersRoute)
 app.use('/posts', postsRoute)
-app.use('/logins', loginsRoute)
+app.use('/login', loginsRoute)
 
 app.get("/", (req, res) => {
     res.send('Hello World!')

@@ -7,6 +7,8 @@ import HomePage from './pages/HomePage'
 import SignIn from './pages/SignIn'
 import SignUp from './pages/SignUp'
 import NotFound from './pages/NotFound'
+import Posts from './pages/Posts'
+import Post from './pages/Post'
 
 function App() {
   return (
@@ -22,7 +24,11 @@ function App() {
           <Route path="/home" component={HomePage} />
           <Route path="/sign-in" component={SignIn} />
           <Route path="/sign-up" component={SignUp} />
-          <Route path="/" component={NotFound} />
+
+          <Route path="/posts" component={Posts}/>
+          <Route exact path="/post/:id" children={<Post />}></Route>
+
+          <Route path="*" component={NotFound} />
         </Switch>
 
         <Footer />

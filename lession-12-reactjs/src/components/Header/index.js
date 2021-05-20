@@ -14,6 +14,7 @@ class Header extends React.Component {
                         <li><NavLink to="/home" className="header__link" activeClassName="header__link--actived">{HOME}</NavLink></li>
                         <li><NavLink to="/sign-in" className="header__link" activeClassName="header__link--actived">{SIGN_IN}</NavLink></li>
                         <li><NavLink to="/sign-up" className="header__link" activeClassName="header__link--actived">{SIGN_UP}</NavLink></li>
+                        <li><NavLink to="/posts" className="header__link" activeClassName="header__link--actived">Bài viết</NavLink></li>
                     </ul>
                 </div>
             </div>

@@ -15,3 +15,8 @@
   .post__author {
     font-weight: 700;
   }
+
+  .preventdefauta {
+    text-decoration: none;
+    color:initial
+  }

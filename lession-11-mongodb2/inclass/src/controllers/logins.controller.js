@@ -1,22 +1,20 @@
-const logins = []
+const User = require('../models/users.model')
 
-module.exports.postLogin = (req,res) => {
-    const {name,password} = req.body
+module.exports.login = async (req,res) => {
+    const {email,password} = req.body
+    const user = await User.findOne({email,password})
 
-    if(name === ""){
-        res.status(400).json({
-            isSuccess: false,
-            message: 'User name must contain only letters, numbers, spaces, or the underscore character'
-        })
-    }
-
-    else {
-        logins.push({id: `${logins.length+1}`,name,password})
-
-        res.status(200).json({
+    if(user) {
+        return res.status(200).json({
             isSuccess: true,
-            message: 'success',
-            logins
+            message:'login succesfully'
         })
     }
+    else {
+        return res.status(400).json({
+            isSuccess: false,
+            message:'wrong emailor pass',
+        })
+    }
+
 }

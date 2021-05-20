@@ -13,7 +13,7 @@ import ClockFuncCountDownToZero from "../../components/ClockFuncCountDownToZero"
 import PostClassComponent from "../../components/PostClassComponent";
 import PostFuncComponent from "../../components/PostFuncComponent";
 
-const postList = [
+export const postList = [
   {
     id: uuidv4(),
     author: "Giang",
@@ -53,15 +53,7 @@ const postList = [
 
 //   render() {
 //     return (
-//       <div className="home-page">
-//         {/* <UserFunctionalComponent name='Hieu' age={18} gender='male' /> */}
-//         {/* <UserClassComponent name='Khoa' age={25} gender="male" /> */}
-//         {/* <CountClassComponent /> */}
-//         {/* <CountFuncComponent /> */}
-//         {/* <ClockClassComponent /> */}
-//         {/* <ClockFuncComponent /> */}
-//         {/* <ClockClassCountDownToZero /> */}
-//         {/* < ClockFuncCountDownToZero /> */}
+//       <div className="home-page">        
 //         {this.state.posts.map((post) => (
 //           <PostClassComponent
 //             key={post.id}
@@ -80,14 +72,6 @@ function HomePage(){
   const [posts,setNewPost] = useState(postList)
 
    const handleClickPost = (postId) => {
-  //   const newPosts = posts.map(post => {
-  //     if (post.id === postId) {
-  //       return {...post,isClicked:!post.isClicked}
-  //     }
-  //     return post
-  //   })
-  //   setNewPost(newPosts)
-
     setNewPost(posts=>posts.map(post => {
       if(post.id === postId) {
         return {...post,isClicked:!post.isClicked}
@@ -98,13 +82,21 @@ function HomePage(){
 
   return (
     <div className="home-page">
-      {posts.map((post) => (
+      <UserFunctionalComponent name='Hieu' age={18} gender='male' />
+        <UserClassComponent name='Khoa' age={25} gender="male" />
+        <CountClassComponent />
+        <CountFuncComponent />
+        <ClockClassComponent />
+        <ClockFuncComponent />
+        <ClockClassCountDownToZero />
+        < ClockFuncCountDownToZero />
+      {/* {posts.map((post) => (
       <PostFuncComponent
         key={post.id}
         postInfo={post}
         onClickPost={handleClickPost}
       />
-    ))}
+    ))} */}
     </div>
   )
 }
