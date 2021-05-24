@@ -1,0 +1,17 @@
+.postid {
+    flex-grow: 1;
+}
+
+.btn-back {
+    margin-bottom: 5px;
+    padding:10px;
+    color:#000;
+    font-size:20px;
+    outline: none;
+    border: none;
+    border-radius:10px ;
+    cursor: pointer;
+    background-color: #ccc;
+    float: left;
+    text-decoration: none;
+}

@@ -1,0 +1,34 @@
+.header {
+    /* padding:16px; */
+    border:1px solid #000;
+}
+
+.header__menu {
+    background-color: #282A35;
+    height:100px;
+}
+
+.header__menu ul {
+    list-style: none;
+    display:flex;
+    line-height: 100px;
+    height:100px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.header__link {
+    color: #f1f1f1;;
+    text-decoration: none;
+    padding:39px
+}
+
+.header__link:hover {
+    background-color: #000000
+}
+
+.header__link--actived {
+    background-color: #000000
+}

@@ -67,9 +67,9 @@ module.exports.putUser = (req, res) => {
 }
 
 module.exports.postUser = (req, res) => {      
-    const { email, password,firstName, lastName,birthday,isMale} = req.body 
+    const { email, password} = req.body 
 
-    if(!email || !password || !firstName || !lastName || !birthday){
+    if(!email || !password){
         return res.status(400).json({
             isSuccess: false,
             message: 'missing required fields',
