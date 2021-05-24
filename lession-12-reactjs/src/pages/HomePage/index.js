@@ -17,19 +17,19 @@ export const postList = [
   {
     id: uuidv4(),
     author: "Giang",
-    content: "Sao cung duoc :v",
+    body: "Sao cung duoc :v",
     isClicked: false,
   },
   {
     id: uuidv4(),
     author: "Khải",
-    content: "Vẻ bề ngoài quan trọng đến thế à, còn ví anh thì sao... dỗi",
+    body: "Vẻ bề ngoài quan trọng đến thế à, còn ví anh thì sao... dỗi",
     isClicked: false,
   },
   {
     id: uuidv4(),
     author: "Tiên",
-    content: "Hôm nay ăn mì",
+    body: "Hôm nay ăn mì",
     isClicked: false,
   },
 ];

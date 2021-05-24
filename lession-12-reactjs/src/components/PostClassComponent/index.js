@@ -12,7 +12,7 @@ class PostClassComponent extends React.Component {
 
   render() {
     const { postInfo, onClickPost } = this.props
-    const { id, author, content, isClicked } = postInfo
+    const { id, author, body, isClicked } = postInfo
     // console.log(content)
     return (
       <div 
@@ -20,7 +20,7 @@ class PostClassComponent extends React.Component {
         onClick={() => onClickPost(id)}
       >
         <p className="post__author">{author}</p>
-        <p className="post__content">{content}</p>
+        <p className="post__content">{body}</p>
       </div>
     )
   }

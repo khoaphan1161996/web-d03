@@ -28,13 +28,14 @@ import "./style.css";
 
 const PostFuncComponent = (props) => {
   const { postInfo } = props;
-  const { id, author, content} = postInfo;
+  const { _id, author, body,reaction} = postInfo;
   
   return (
-    <Link to={`/post/${id}`} className="preventdefauta">
+    <Link to={`/post/${_id}`} className="preventdefauta">
       <div className="post">
         <p className="post__author">{author}</p>
-        <p className="post__content">{content}</p>
+        <p className="post__content">{body}</p>
+        <p className="post__content">👍{reaction.like} 😀{reaction.smile}  ❤️{reaction.love}  😤{reaction.angry}  😯{reaction.surprise}</p>
       </div>
     </Link>
   );
